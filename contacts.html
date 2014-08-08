@@ -41,150 +41,181 @@
 				</ul>
 
 				<div class="tab-content">
-					<div class="well tab-pane active fade" id="formTab">
+					<div class="well tab-pane active in fade" id="formTab">
 						<div id="form_box" class="row">
 							<form class="form-horizontal" id="contactForm">
-								<div class="form-group">
-									<label for="nameInput" class="control-label col-md-2">Your Name</label>
-									<div class="col-md-10">
+								<div class="form-group popover-markup">
+									<label for="nameInput" 
+									class="control-label col-md-2 trigger"
+									data-toggle-"popover"
+									data-html="false"
+									data-placement= "right"
+									>Your Name</label>
+
+									
+									<div class="head collapse">
+										<p>This is the popover title.</p>
+									</div>
+									<div id="popoverContent"
+									class="content collapse" >
+									<p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt quis leo vel porttitor.</p>
+									<p> Cras lorem metus, gravida et turpis non, porttitor sollicitudin nunc. Praesent eget porttitor quam. Duis vulputate pulvinar semper. Vivamus ornare ultrices malesuada. Nulla convallis ultricies justo, at lobortis est commodo eu. Fusce eu risus et nibh gravida ultrices non quis est. Morbi consectetur et ante in feugiat. Maecenas ultrices sollicitudin est sed tempor. In adipiscing velit vel ultrices fermentum. Suspendisse tincidunt convallis blandit. Morbi vitae pellentesque orci. Ut odio urna, vestibulum vel tempus nec, adipiscing vel nunc.</p>
+								</div>
+
+								<div class="col-md-10">
+									<input type="text"
+									name="nameInput"
+									class="form-control"
+									placeholder="e.g. Your Name"/>
+								</div>
+
+
+									<!-- <div class="popover-markup">
+										<a href="#" class="trigger">
+											This link triggers the popover.
+										</a>
+										<div class="head hide">
+											This is the popover title.
+										</div>
+										<div class="content hide">
+											<p>This is the popover content.</p>
+										</div>
+									</div>
+								-->
+
+							</div>
+							<div class="form-group">
+								<label for="emailInput"
+								class="control-label col-md-2">Email</label>
+								<div class="col-md-10">
+									<div class="input-group">
+										<span class="input-group-addon">@</span>
 										<input type="text"
-										name="nameInput"
+										name="emailInput"
 										class="form-control"
-										placeholder="e.g. Your Name"/>
+										placeholder="e.g. kornfan420@hotmail.com" />
 									</div>
 								</div>
-								<div class="form-group">
-									<label for="emailInput"
-									class="control-label col-md-2">Email</label>
-									<div class="col-md-10">
-										<div class="input-group">
-											<span class="input-group-addon">@</span>
-											<input type="text"
-											name="emailInput"
-											class="form-control"
-											placeholder="e.g. kornfan420@hotmail.com" />
-										</div>
-									</div>
-								</div>
-								<div class="form-group">
-									<label for="complaintButtons" class="control-label col-md-2">Complaint</label>
-									<div class="col-md-10">
-										<div id='complaintButtons' class="btn-group" data-toggle="buttons">
-											<label class="btn btn-success" data-toggle="button"><input type="radio" >Personal</input></label>
-											<label class="btn btn-success" data-toggle="button"><input type="radio" >Professional</input></label>
-											<label class="active btn btn-success" data-toggle="button"><input type="radio" >Peer Pressure</input></label>
+							</div>
+							<div class="form-group">
+								<label for="complaintButtons" class="control-label col-md-2">Complaint</label>
+								<div class="col-md-10">
+									<div id='complaintButtons' class="btn-group" data-toggle="buttons">
+										<label class="btn btn-success" data-toggle="button"><input type="radio" >Personal</input></label>
+										<label class="btn btn-success" data-toggle="button"><input type="radio" >Professional</input></label>
+										<label class="active btn btn-success" data-toggle="button"><input type="radio" >Peer Pressure</input></label>
 
 
-											<div class="btn-group" data-toggle="buttons">
+										<div class="btn-group" data-toggle="buttons">
 
-												<label id="thingsButton" class="btn btn-success" data-toggle="button">
-													<input type="radio">Things</input> 
-												</label>
-												<button class="btn btn-success" data-toggle="dropdown"><span class="caret"></span></button>
+											<label id="thingsButton" class="btn btn-success" data-toggle="button">
+												<input type="radio">Things</input> 
+											</label>
+											<button class="btn btn-success" data-toggle="dropdown"><span class="caret"></span></button>
 
-												<ul id="thingsDropdown" class="dropdown-menu">
-													<li><a href="#" tabndex="-1" value="Other Stuff">Other Stuff</a></li>
-													<li><a href="#" tabndex="-1" value="Other Things">Other Things</a></li>
-													<li class="divider"></li>
-													<li class="disabled" ><a href="#" tabndex="-1" value="Other">Other</a></li>
-												</ul>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="form-group">
-									<label
-									class="control-label col-md-2">Reason</label>
-									<div class="col-md-10">
-										<div class="dropdown">
-											<button class="btn btn-success" id="pickButton">Pick One</button>
-											<button class="btn btn-success" data-toggle="dropdown">
-												<span class="caret"></span>
-											</button>
-											<ul class="dropdown-menu" id="reasonDropdown">
-												<li><a href="#" tabindex="-1">I was told to.</a></li>
-												<li><a href="#" tabindex="-1">I just don't like you.</a></li>
-												<li><a href="#" tabindex="-1">I don't like anyone.</a></li>
-												<li><a href="#" tabindex="-1">It's been a long day.</a></li>
-												<li><a href="#" tabindex="-1">Just testing the system...</a></li>
+											<ul id="thingsDropdown" class="dropdown-menu">
+												<li><a href="#" tabndex="-1" value="Other Stuff">Other Stuff</a></li>
+												<li><a href="#" tabndex="-1" value="Other Things">Other Things</a></li>
+												<li class="divider"></li>
+												<li class="disabled" ><a href="#" tabndex="-1" value="Other">Other</a></li>
 											</ul>
 										</div>
-
 									</div>
 								</div>
-								<div class="form-group">
-									<label class="control-label col-md-2">Message</label>
-									<div class="col-md-10">
-										<textarea cols="40" rows="6" class="form-control"></textarea>
-									</div>
-								</div>
-								<div class="form-group">
-									<div class="col-md-10 col-md-offset-2">
-										<input type="submit" 
-										value="Submit" 
-										class="btn btn-success" 
-										data-toggle="tooltip" 
-										data-html="true"
-										title="<img src='images/penguin2.jpg' class='image-responsive' />" 
-										data-placement="left" />
-									</div>
-								</div>
-
-							</form>
-						</div>
-					</div>
-
-					<div class="well tab-pane fade" id="addressTab">
-						<div class="row">
-							<h3>Addressesses</h3>
-							<div>
-								<address>
-									Not a Scam Inc. <br />
-									123 Easy St. <br />
-									Somewhere, AK 15684<br />
-									<abbr title="Phone">P:</abbr>
-									503.555.3698
-								</address>
-								<strong>Support: </strong>
-								<a href="mailto:delete@notascam.com">support@notascam.com</a><br />
-								<strong>Marketing: </strong>
-								<a href="mailto:givemeyourmoney@notascam.com">giveyourmoney@notascam.com</a>
 							</div>
-						</div>
+							<div class="form-group">
+								<label
+								class="control-label col-md-2">Reason</label>
+								<div class="col-md-10">
+									<div class="dropdown">
+										<button class="btn btn-success" id="pickButton">Pick One</button>
+										<button class="btn btn-success" data-toggle="dropdown">
+											<span class="caret"></span>
+										</button>
+										<ul class="dropdown-menu" id="reasonDropdown">
+											<li><a href="#" tabindex="-1">I was told to.</a></li>
+											<li><a href="#" tabindex="-1">I just don't like you.</a></li>
+											<li><a href="#" tabindex="-1">I don't like anyone.</a></li>
+											<li><a href="#" tabindex="-1">It's been a long day.</a></li>
+											<li><a href="#" tabindex="-1">Just testing the system...</a></li>
+										</ul>
+									</div>
+
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="control-label col-md-2">Message</label>
+								<div class="col-md-10">
+									<textarea cols="40" rows="6" class="form-control"></textarea>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-md-10 col-md-offset-2">
+									<input type="submit" 
+									value="Submit" 
+									class="btn btn-success" 
+									data-toggle="tooltip" 
+									data-html="true"
+									title="<img src='images/penguin2.jpg' class='image-responsive' />" 
+									data-placement="left" />
+								</div>
+							</div>
+
+						</form>
 					</div>
 				</div>
-			</div>
-		</section>
 
-
-	</section>
-	<footer id='footerContainer' class="container">
-		<h2>Footer</h2>
-	</footer>
-
-	<div class="modal fade" id="sentDialog" tabindex="-1">
-		<div class="modal-dialog">
-			<div class="modal-content">
-				<div class="modal-header">
-					<a href="#" class="close" data-dismiss="modal">&times</a>
-					<h4>Modal Dialog &curren;!!</h4>
-				</div>
-				<div class="modal-body">
-					<p class="txt-danger">Look at me!! I'm important!</p>
-				</div>
-				<div class="modal-footer">
-					<button class="btn btn-success" data-dismiss="modal">Close</button>
+				<div class="well tab-pane fade" id="addressTab">
+					<div class="row">
+						<h3>Addressesses</h3>
+						<div>
+							<address>
+								Not a Scam Inc. <br />
+								123 Easy St. <br />
+								Somewhere, AK 15684<br />
+								<abbr title="Phone">P:</abbr>
+								503.555.3698
+							</address>
+							<strong>Support: </strong>
+							<a href="mailto:delete@notascam.com">support@notascam.com</a><br />
+							<strong>Marketing: </strong>
+							<a href="mailto:givemeyourmoney@notascam.com">giveyourmoney@notascam.com</a>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
+	</section>
+
+
+</section>
+<footer id='footerContainer' class="container">
+	<h2>Footer</h2>
+</footer>
+
+<div class="modal fade" id="sentDialog" tabindex="-1">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<a href="#" class="close" data-dismiss="modal">&times</a>
+				<h4>Modal Dialog &curren;!!</h4>
+			</div>
+			<div class="modal-body">
+				<p class="txt-danger">Look at me!! I'm important!</p>
+			</div>
+			<div class="modal-footer">
+				<button class="btn btn-success" data-dismiss="modal">Close</button>
+			</div>
+		</div>
 	</div>
+</div>
 
 
-	<script type="text/javascript" src="js/jquery-1.11.1.js"></script>
-	<script type="text/javascript" src="js/bootstrap.js"></script>
-	<script type="text/javascript" src="js/custom.js"></script>
-	<link rel="stylesheet" href="css/united-bootstrap-theme.min.css"></link>
-	<link rel="stylesheet" href="css/custom.css"></link>
+<script type="text/javascript" src="js/jquery-1.11.1.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+<script type="text/javascript" src="js/custom.js"></script>
+<link rel="stylesheet" href="css/united-bootstrap-theme.min.css"></link>
+<link rel="stylesheet" href="css/custom.css"></link>
 
 </body>
 
